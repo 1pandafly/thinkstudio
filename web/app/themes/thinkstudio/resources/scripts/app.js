@@ -1,10 +1,11 @@
 import domReady from '@roots/sage/client/dom-ready';
+import header from "@scripts/components/header.js";
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  // ...
+  header();
 });
 
 /**

@@ -1,0 +1,45 @@
+.main-menu {
+  .main-nav {
+    li:hover {
+      @media (hover: hover) {
+        @apply bg-red;
+
+        svg path {
+          @apply fill-white;
+        }
+      }
+    }
+
+    & > li {
+      @apply relative w-full md:w-[50%];
+
+      a {
+        @apply block pl-4 pr-14 py-[12px] relative;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          & > .sub-menu {
+            @apply block;
+          }
+        }
+      }
+
+      & > .sub-menu {
+        @apply overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out md:max-h-none md:hidden md:absolute md:top-0 md:right-0 md:translate-x-full z-10 w-[100%] pl-10 md:pl-0;
+
+        &.submenu-open {
+          @apply max-h-[500px];
+        }
+      }
+    }
+  }
+
+  .submenu-toggle {
+    @apply w-12 h-12 absolute top-0 right-0;
+
+    svg {
+      @apply absolute right-4 top-1/2 -translate-y-1/2 rotate-90 md:rotate-0;
+    }
+  }
+}
