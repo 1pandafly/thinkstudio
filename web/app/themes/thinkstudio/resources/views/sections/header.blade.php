@@ -70,7 +70,9 @@
       !!}
     </div>
     <div class="hidden lg:block">
-      {!! wp_get_attachment_image($menu_image, 'full', false, ['class' => '']) !!}
+      @if($menu_image)
+        {!! wp_get_attachment_image($menu_image, 'full', false, ['class' => '']) !!}
+      @endif
     </div>
   </div>
 </div>
